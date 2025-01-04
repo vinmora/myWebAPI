@@ -1,13 +1,7 @@
 from django.http import HttpResponse
 from django.contrib import admin
 from django.urls import path
-
-def index(request):
-    return HttpResponse("Halo dunia Django web framework")
-
-def blog(request):
-    return HttpResponse("Ini adalah halaman blog")
-
+from .views import index, blog
 
 urlpatterns = [
     path('', index),
