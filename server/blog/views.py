@@ -3,7 +3,10 @@ from django.http import HttpRequest, HttpResponse
 
 
 def index(request):
-    return render(request, "blog.html")
+    context = {
+        'penulis' : "Komoro"
+    }
+    return render(request, "blog.html", context)
 
 def cari(request):
     return HttpResponse("ini adalah tampilan pencarian")

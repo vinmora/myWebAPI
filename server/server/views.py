@@ -11,7 +11,13 @@ def blog(request):
     return HttpResponse(output)
 
 def index(request):
-    return render(request, "main.html")
+
+    context = {
+        'title': 'Main Page',
+        'developer': 'Ananda Kelvin'
+    }
+    
+    return render(request, "main.html",  context)
 
 def index1(request):
     return HttpResponse("Ini adalah API web saya")
